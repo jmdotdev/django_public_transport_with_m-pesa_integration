@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
     'mpesa',
+    'accounts',
+    'drivers',
+    'bookings',
 ]
 
 MIDDLEWARE = [

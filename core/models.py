@@ -20,6 +20,7 @@ class Car(models.Model):
     plate_no = models.CharField(max_length=100)
     fuel = models.CharField(max_length=100, choices=Fuel_Choices)
     Transmission = models.CharField(max_length=100, choices=Transmission_Choices)
+    booked = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -41,3 +42,30 @@ class Contact(models.Model):
         verbose_name_plural = 'Contacts'
 
 
+class Testimonial(models.Model):
+    name = models.CharField(max_length=150)
+    subject = models.CharField(max_length=100)
+    avatar = models.ImageField()
+    message = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Testimonials'
+
+
+class Route(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    From = models.CharField(max_length=200)
+    Destination = models.CharField(max_length=200)
+    Day = models.DateField(auto_now_add=False)
+    Departure_Time = models.TimeField(auto_now_add=False)
+    Arrival_time = models.TimeField(auto_now_add=False)
+    price = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return "From:" + str(self.From) + ":To:" + str(self.Destination)
+
+    class Meta:
+        verbose_name_plural = 'Routes'

@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookingForm</title>
+</head>
+<body>
+{% block content %}
+<form method="post">
+{% csrf_token %}
+{{ form }}
+<button class="btn btn-info">book now</button>
+</form>
+    {% for messages in messages %}
+    <div class="alert-success">{{ messages }}</div>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
