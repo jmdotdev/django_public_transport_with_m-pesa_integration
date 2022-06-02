@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7e092383-9586-48f1-895a-95c29d2801eb" name="Default Changelist" comment="">
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/urls.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/urls.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/views.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/views.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/forms.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/forms.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/BookingForm.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/BookingForm.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/TicketPage.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/TicketPage.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +99,16 @@
       <workItem from="1653710222612" duration="55000" />
       <workItem from="1653716646275" duration="1090000" />
       <workItem from="1653719551255" duration="450000" />
+      <workItem from="1653949516081" duration="61000" />
+      <workItem from="1654072743886" duration="710000" />
+      <workItem from="1654084062138" duration="11000" />
+      <workItem from="1654091331829" duration="7000" />
+      <workItem from="1654091582977" duration="336000" />
+      <workItem from="1654109786721" duration="71000" />
+      <workItem from="1654148861709" duration="1176000" />
+      <workItem from="1654150179809" duration="869000" />
+      <workItem from="1654155016605" duration="174000" />
+      <workItem from="1654155340054" duration="17000" />
     </task>
     <servers />
   </component>

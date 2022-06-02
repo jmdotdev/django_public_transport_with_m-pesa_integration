@@ -28,4 +28,4 @@ class ReserveSeatForm(forms.ModelForm):
         #     'Time': forms.TimeInput(attrs={'class': 'form-control'}),
         #     'persons': forms.NumberInput(attrs={'class': 'form-control'}),
         # }
-        fields = '__all__'
+        fields = ['date', 'Time', 'persons']
