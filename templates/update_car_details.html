@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update_car_details</title>
+</head>
+<body>
+{% for messages in messages %}
+    {{ messages }}
+{% endfor %}
+<form method="post" enctype="multipart/form-data" onsubmit="SubmitResponse()">
+    {% csrf_token %}
+    {{ form }}
+<button class="btn btn-info" type="submit">update</button>
+</form>
+<script>
+    function SubmitResponse(){
+    alert("The form was submitted Thankyou");
+    }
+</script>
+</body>
+</html>

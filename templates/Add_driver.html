@@ -9,9 +9,11 @@
 <body>
 {% block content %}
 
-     <div class="row">
+     <div class="row" style="margin-top: 100px;background-color: #f8f9fa;">
           <div class="container">
-         <div class="col-md-10 text-center">
+
+         <div class="col-md-10 text-center p-3">
+           <h3>Fill form below</h3>
              <div class="container mt-5">
                  <form method="post" enctype="multipart/form-data">
                      {% csrf_token %}

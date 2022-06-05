@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.db import models
 
 Fuel_Choices = [
@@ -37,6 +38,17 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+    def save_contacts(self,request):
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        contact = Contact()
+        contact.name = name
+        contact.email = email
+        contact.subject = subject
+        contact.message = message
+        contact.save()
 
     class Meta:
         verbose_name_plural = 'Contacts'
@@ -50,6 +62,20 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save_testimonial(self, request):
+        name = request.POST.get('name')
+        subject = request.POST.get('subject')
+        avatar = request.FILES['avatar']
+        message = request.POST.get('message')
+        testimonial = Testimonial()
+        testimonial.name = name
+        testimonial.subject = subject
+        testimonial.avatar = avatar
+        testimonial.message = message
+        testimonial.save()
+        messages.info(request, 'testimonial added thankyou!!')
+        return messages
 
     class Meta:
         verbose_name_plural = 'Testimonials'

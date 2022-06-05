@@ -1,11 +1,10 @@
-from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, FormView, UpdateView
 
+from core.forms import AddCarForm
 from core.models import Contact, Car, Testimonial, Route
 
 
@@ -21,6 +20,11 @@ class HomePage(TemplateView):
 
 class AboutUs(TemplateView):
     template_name = 'about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutUs, self).get_context_data(**kwargs)
+        context['testimonial'] = Testimonial.objects.all()
+        return context
 
 
 class Services(TemplateView):
@@ -70,23 +74,36 @@ class ContactUs(View):
         return render(request, 'contact.html')
 
     def post(self, request):
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
-        contact = Contact()
-        contact.name = name
-        contact.email = email
-        contact.subject = subject
-        contact.message = message
-        contact.save()
-        messages.info(request, 'Feedback Received Thankyou!!')
+        contacts = Contact()
+        contacts.save_contacts(request=request)
         return render(request, 'contact.html')
 
 
-class Blog(TemplateView):
-    template_name = 'blog.html'
+class AddTestimonials(View):
+    def get(self, request):
+        return render(request, 'add_testimonial.html')
+
+    def post(self, request):
+        testimonial = Testimonial()
+        testimonial.save_testimonial(request=request)
+        return render(request, 'add_testimonial.html')
 
 
-class BlogDetail(TemplateView):
-    template_name = 'blog-single.html'
+class AddCar(FormView):
+    template_name = 'add_car.html'
+    success_url = '/'
+    messages = 'Car added successfully'
+    form_class = AddCarForm
+
+    def form_valid(self, form):
+        if form.is_valid():
+            form.save()
+        return super().form_valid(form)
+
+
+class UpdateCar(UpdateView):
+    model = Car
+    fields = ['name', 'image', 'capacity', 'fuel', 'plate_no', 'Transmission', 'description']
+    template_name = 'update_car_details.html'
+    messages = 'Car updated successfully'
+    success_url = '/'

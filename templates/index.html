@@ -44,8 +44,8 @@
 	          <li class="nav-item"><a href="{% url 'Routes' %}" class="nav-link">Routes</a></li>
 	          <li class="nav-item"><a href="{% url 'Cars' %}" class="nav-link">Cars</a></li>
 	          <li class="nav-item"><a href="{% url 'ContactUs' %}" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Login</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Register</a></li>
+              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+              <li class="nav-item"><a href="{% url 'RegisterUser' %}" class="nav-link">Register</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -286,69 +286,13 @@
                 </div>
               </div>
                 {% endfor %}
+
             </div>
+               <a class="btn btn-info" href="{% url 'AddTestimonials' %}">Add testimonial</a>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Blog</span>
-            <h2>Recent Blog</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_1.jpg' %});">
-              </a>
-              <div class="text pt-4">
-              	<div class="meta mb-3">
-                  <div><a href="#">Oct. 29, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_2.jpg' %});">
-              </a>
-              <div class="text pt-4">
-              	<div class="meta mb-3">
-                  <div><a href="#">Oct. 29, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_3.jpg' %});">
-              </a>
-              <div class="text pt-4">
-              	<div class="meta mb-3">
-                  <div><a href="#">Oct. 29, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>	
 
     <section class="ftco-counter ftco-section img bg-light" id="section-counter">
 			<div class="overlay"></div>
@@ -446,9 +390,8 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+  Copyright &copy;pochii All rights reserved</p>
           </div>
         </div>
       </div>
