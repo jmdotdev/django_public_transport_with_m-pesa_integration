@@ -1,10 +1,11 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
 from django.views.generic import TemplateView, DetailView, FormView, UpdateView
 
-from core.forms import AddCarForm
+from core.forms import AddCarForm, AddRouteForm
 from core.models import Contact, Car, Testimonial, Route
 
 
@@ -107,3 +108,27 @@ class UpdateCar(UpdateView):
     template_name = 'update_car_details.html'
     messages = 'Car updated successfully'
     success_url = '/'
+
+
+class AddRoute(FormView):
+    template_name = 'add_route.html'
+    success_url = '/'
+    form_class = AddRouteForm
+
+    def form_valid(self, form):
+        if form.is_valid():
+            form.save()
+        return super().form_valid(form)
+
+
+class Update_Route(UpdateView):
+    template_name = 'update_car_details.html'
+    model = Route
+    success_url = '/'
+    fields = ['car', 'From', 'Destination', 'Day', 'Departure_Time', 'Arrival_time', 'price']
+
+
+def myview(request):
+    domain = request.build_absolute_uri('/')[:-1]
+    print(domain)
+    return HttpResponse('domain printed')

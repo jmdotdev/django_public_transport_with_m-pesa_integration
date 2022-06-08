@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 from bookings.models import Booking
-from core.models import Car
+from core.models import Car, Route
 from drivers.models import Driver
 
 
@@ -26,12 +26,11 @@ class ReserveSeatForm(forms.ModelForm):
     class Meta:
         model = Booking
         # widgets = {
-        #     'route': forms.TextInput(attrs={'class': 'form-control'}),
         #     'date': forms.DateInput(attrs={'class': 'form-control'}),
         #     'Time': forms.TimeInput(attrs={'class': 'form-control'}),
         #     'persons': forms.NumberInput(attrs={'class': 'form-control'}),
         # }
-        fields = ['date', 'Time', 'persons']
+        fields = ['date', 'Time', 'persons', 'mobile_no']
 
 
 class RegisterUserForm(UserCreationForm):
@@ -52,3 +51,9 @@ class AddCarForm(forms.ModelForm):
         fields = ['name', 'image', 'capacity', 'fuel',
                   'plate_no', 'Transmission', 'description'
                   ]
+
+
+class AddRouteForm(forms.ModelForm):
+    class Meta:
+        model = Route
+        fields = '__all__'

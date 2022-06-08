@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Item</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <p>are you sure you want to delete booking {{ object.route }} for {{ object.persons }} persons?</p>
+    <button type="submit">im sure</button>
+</form>
+</body>
+</html>

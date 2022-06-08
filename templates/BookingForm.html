@@ -8,11 +8,17 @@
 </head>
 <body>
 {% block content %}
-<form method="post">
+<div class="main" style="margin-top: 100px;display:block;">
+<form method="post" style="display: grid;justify-content: center;align-items: center;">
 {% csrf_token %}
-{{ form }}
-<button class="btn btn-info">book now</button>
+{% for field in form %}
+    <label>{{ field.label_tag }}</label>
+    {{ field }}
+    {% endfor %}
+    <button class="btn btn-info" type="submit">book now</button>
 </form>
+</div>
+
 {% endblock %}
 </body>
 </html>

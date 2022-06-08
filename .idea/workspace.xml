@@ -2,27 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e092383-9586-48f1-895a-95c29d2801eb" name="Default Changelist" comment="">
-      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/LoginPage.html" afterDir="false" />
-      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/Register.html" afterDir="false" />
-      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/add_car.html" afterDir="false" />
-      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/add_testimonial.html" afterDir="false" />
-      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/update_car_details.html" afterDir="false" />
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/Booking_Details.html" afterDir="false" />
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/MyBookings.html" afterDir="false" />
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/add_route.html" afterDir="false" />
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/delete.html" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/accounts/urls.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/accounts/urls.py" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/accounts/views.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/accounts/views.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/SACCO_SYSTEM_M_PESA/settings.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/SACCO_SYSTEM_M_PESA/settings.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/models.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/models.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/urls.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/urls.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/views.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/bookings/views.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/forms.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/forms.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/models.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/models.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/urls.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/urls.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/views.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/views.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/Add_driver.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/Add_driver.html" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/about.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/about.html" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/blog-single.html" beforeDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/blog.html" beforeDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/car.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/car.html" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/contact.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/contact.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/BookingForm.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/BookingForm.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/TicketPage.html" beforeDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" afterDir="false" />
-      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/services.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +126,16 @@
       <workItem from="1654166733990" duration="926000" />
       <workItem from="1654188487481" duration="10000" />
       <workItem from="1654365971704" duration="9763000" />
+      <workItem from="1654404208869" duration="562000" />
+      <workItem from="1654407382869" duration="1732000" />
+      <workItem from="1654412149861" duration="31000" />
+      <workItem from="1654416295548" duration="4262000" />
+      <workItem from="1654422532225" duration="5415000" />
+      <workItem from="1654430251556" duration="90000" />
+      <workItem from="1654690199397" duration="2711000" />
+      <workItem from="1654693047390" duration="4271000" />
+      <workItem from="1654697378686" duration="1166000" />
+      <workItem from="1654699563748" duration="902000" />
     </task>
     <servers />
   </component>

@@ -43,6 +43,8 @@
 	          <li class="nav-item"><a href="{% url 'Services' %}" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="{% url 'Routes' %}" class="nav-link">Routes</a></li>
 	          <li class="nav-item"><a href="{% url 'Cars' %}" class="nav-link">Cars</a></li>
+	          <li class="nav-item"><a href="{% url 'MyBookings' %}" class="nav-link">My Bookings</a></li>
+	          <li class="nav-item"><a href="" class="nav-link">Admin</a></li>
 	          <li class="nav-item"><a href="{% url 'ContactUs' %}" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
               <li class="nav-item"><a href="{% url 'RegisterUser' %}" class="nav-link">Register</a></li>
@@ -288,7 +290,7 @@
                 {% endfor %}
 
             </div>
-               <a class="btn btn-info" href="{% url 'AddTestimonials' %}">Add testimonial</a>
+               <a class="btn btn-info mt-3" href="{% url 'AddTestimonials' %}">Add testimonial</a>
           </div>
         </div>
       </div>
@@ -367,7 +369,7 @@
               <h2 class="ftco-heading-2">Customer Support</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
-                <li><a href="#" class="py-2 d-block">Payment Option</a></li>
+                <li><a href="#" onclick="PaymentOptions()" class="py-2 d-block">Payment Option</a></li>
                 <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
                 <li><a href="#" class="py-2 d-block">How it works</a></li>
                 <li><a href="#" class="py-2 d-block">Contact Us</a></li>
@@ -402,7 +404,11 @@
   <!-- loader -->
 {#  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>#}
 {#      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>#}
-
+   <script>
+       function PaymentOptions(){
+           alert('Only m-pesa payments are allowed');
+       }
+   </script>
 
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

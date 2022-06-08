@@ -12,10 +12,14 @@
     <section class="Bookings_detail">
         <div class="container">
      <div class="card text-center mt-5">
-
   <div class="card-body">
-    <h5 class="card-title">Reservation made.Make payments to print ticket</h5>
-    <a href="{% url 'submit' %}" class="btn btn-success">Pay with Mpesa</a>
+    <h2 class="card-title">Reservation Details for {{ booking.user }}</h2>
+      <h3>Reserved Route:{{ booking.route}}</h3>
+      <h4>Reserved Persons:{{ booking.persons}}</h4>
+      <h4>Total_payable:ksh.{{ booking.total}}</h4>
+      <h4>m-pesa_no:{{ booking.mobile_no }}</h4>
+      <a class="btn btn-info" href="{% url 'MyBookings' %}">Proceed to Payment</a>
+
   </div>
 </div>
      </div>

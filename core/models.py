@@ -38,7 +38,8 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
-    def save_contacts(self,request):
+
+    def save_contacts(self, request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
@@ -95,3 +96,9 @@ class Route(models.Model):
 
     class Meta:
         verbose_name_plural = 'Routes'
+
+    def get_time_to_reach_destination(self, pk):
+        route = Route.objects.get(pk=pk)
+        time_taken = route.Arrival_time - route.Departure_Time
+        route.save()
+        return time_taken
