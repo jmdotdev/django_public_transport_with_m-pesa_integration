@@ -53,14 +53,15 @@ MIDDLEWARE = [
 ]
 
 MPESA_CONFIG = {
-    'CONSUMER_KEY': 'S87OlAhSDUtLmGSo5fJ2GBvDapG0QWe2',
-    'CONSUMER_SECRET': 'jQ6srBsT4QTL7G6w',
+    'CONSUMER_KEY': 'AUfqJWrHpavFgKPBd15Zbd0DPt0ANUF6',
+    'CONSUMER_SECRET': '5pqIjQKDEG6X5jYD',
     'CERTIFICATE_FILE': None,
     'HOST_NAME': "https://sandbox.safaricom.co.ke",
     'PASS_KEY': 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919',
     'SAFARICOM_API': 'https://sandbox.safaricom.co.ke',
     'SHORT_CODE': '174379',
     'TRANSACTION_TYPE': 'CustomerBuyGoodsOnline',
+    'Access Token':'21151-53711059-2',
 }
 
 ROOT_URLCONF = 'SACCO_SYSTEM_M_PESA.urls'
