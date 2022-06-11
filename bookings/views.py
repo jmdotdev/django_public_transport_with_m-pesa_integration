@@ -55,16 +55,22 @@ class BookingDetailsPage(TemplateView):
 
 class MyBookings(View):
     def get(self, request):
-        booking = Booking.objects.filter(user=self.request.user)
-        return render(request, 'MyBookings.html', {'booking': booking})
+        if not request.user.is_authenticated:
+            return redirect('login')
+        else:
+            booking = Booking.objects.filter(user=self.request.user)
+            return render(request, 'MyBookings.html', {'booking': booking})
 
     def post(self, request):
-        var_domain = request.build_absolute_uri('/')[:-1]
-        domain = var_domain + '/mpesa/submit/'
-        booking = Booking.objects.get(id=request.POST['booking_id'])
-        res = requests.post(url=domain,
-                            data={'phone_number': booking.mobile_no, 'amount': booking.total})
-        return redirect('/')
+        if not request.user.is_authenticated:
+            return redirect('login')
+        else:
+            var_domain = request.build_absolute_uri('/')[:-1]
+            domain = var_domain + '/mpesa/submit/'
+            booking = Booking.objects.get(id=request.POST['booking_id'])
+            res = requests.post(url=domain,
+                                data={'phone_number': booking.mobile_no, 'amount': booking.total})
+            return redirect('/')
 
 
 class CancelBooking(View):

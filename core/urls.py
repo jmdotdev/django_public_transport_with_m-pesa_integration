@@ -1,8 +1,7 @@
 from django.urls import path
 
 from core.views import HomePage, AboutUs, Services, Routes, Cars, \
-    CarDetail, ContactUs, RoutesDetail, AddTestimonials, AddCar, UpdateCar, AddRoute, Update_Route, myview
-
+    CarDetail, ContactUs, RoutesDetail, AddTestimonials, AddCar, UpdateCar, AddRoute, Update_Route,AdminPage,Search
 urlpatterns = [
     path('', HomePage.as_view(), name="HomePage"),
     path('AboutUs/', AboutUs.as_view(), name="AboutUs"),
@@ -17,5 +16,6 @@ urlpatterns = [
     path('CarDetail/<int:pk>/', CarDetail.as_view(), name="CarDetail"),
     path('ContactUs/', ContactUs.as_view(), name="ContactUs"),
     path('AddTestimonials/', AddTestimonials.as_view(), name="AddTestimonials"),
-    path('myview/', myview, name="myview"),
+    path('AdminPage/', AdminPage.as_view(), name="AdminPage"),
+    path('Search/', Search.as_view(), name="Search"),
 ]

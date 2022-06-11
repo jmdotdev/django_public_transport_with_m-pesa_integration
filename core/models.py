@@ -102,3 +102,13 @@ class Route(models.Model):
         time_taken = route.Arrival_time - route.Departure_Time
         route.save()
         return time_taken
+
+
+class Section_Counter(models.Model):
+    years_experienced = models.PositiveIntegerField(default=0)
+    total_cars = models.PositiveIntegerField(default=0)
+    happy_customers = models.PositiveIntegerField(default=0)
+    total_branches = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Section_Counter'

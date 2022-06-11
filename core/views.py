@@ -5,8 +5,9 @@ from django.shortcuts import render
 from django.views import View
 from django.views.generic import TemplateView, DetailView, FormView, UpdateView
 
+from bookings.models import Booking
 from core.forms import AddCarForm, AddRouteForm
-from core.models import Contact, Car, Testimonial, Route
+from core.models import Contact, Car, Testimonial, Route, Section_Counter
 
 
 class HomePage(TemplateView):
@@ -16,6 +17,7 @@ class HomePage(TemplateView):
         context = super().get_context_data(**kwargs)
         context['car'] = Car.objects.all()
         context['testimonial'] = Testimonial.objects.all()
+        context['counter'] = Section_Counter.objects.all()
         return context
 
 
@@ -25,6 +27,7 @@ class AboutUs(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(AboutUs, self).get_context_data(**kwargs)
         context['testimonial'] = Testimonial.objects.all()
+        context['counter'] = Section_Counter.objects.all()
         return context
 
 
@@ -128,7 +131,31 @@ class Update_Route(UpdateView):
     fields = ['car', 'From', 'Destination', 'Day', 'Departure_Time', 'Arrival_time', 'price']
 
 
-def myview(request):
-    domain = request.build_absolute_uri('/')[:-1]
-    print(domain)
-    return HttpResponse('domain printed')
+class AdminPage(View):
+    def get(self, request):
+        route = Route.objects.all()
+        car = Car.objects.all()
+        booking = Booking.objects.all()
+        context = {'route': route, 'car': car, 'booking': booking}
+        return render(request, 'AdminSite.html', context)
+
+    def post(self, request):
+        return render(request, 'AdminSite.html')
+
+
+class Search(View):
+    def get(self, request):
+        fromt = request.GET.get('fromt')
+        to = request.GET.get('to')
+        date = request.GET.get('date')
+        if fromt and to:
+            route = Route.objects.all().filter(From__icontains=fromt, Destination__icontains=to).order_by('-id')
+        elif fromt:
+            route = Route.objects.all().filter(From__icontains=fromt).order_by('-id')
+        elif to:
+            route = Route.objects.all().filter(Destination__icontains=to).order_by('-id')
+        elif date:
+            route = Route.objects.all().filter(Day=date).order_by('-id')
+        else:
+            return render(request, 'Search.html')
+        return render(request, 'Search.html', {'route': route})
