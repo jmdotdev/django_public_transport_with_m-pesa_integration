@@ -33,6 +33,8 @@
                     <th>Image</th>
                     <th>Plate_No</th>
                     <th>Capacity</th>
+                    <th>Action</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,6 +44,8 @@
                     <td><img src="{{ car.image.url }}" alt="not found" height="100px" width="100px"></td>
                     <td>{{ car.plate_no }}</td>
                     <td>{{ car.capacity }}</td>
+                    <td><a class="btn btn-info" href="{% url 'UpdateCar' car.id %}">update</a> </td>
+                    <td><a class="btn btn-danger" href="">delete</a> </td>
                 </tr>
                 {% endfor %}
                 </tbody>
@@ -58,8 +62,9 @@
                     <th>SN</th>
                     <th>Route</th>
                     <th>Day</th>
-                    <th>Departure</th>
-                    <th>Arrival</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -68,8 +73,9 @@
                     <td>{{ forloop.counter }}</td>
                     <td>{{ route }}</td>
                     <td>{{ route.Day }}</td>
-                    <td>{{ route.Departure_Time }}</td>
-                    <td>{{ route.Arrival_time }}</td>
+                    <td>{{ route.price }}</td>
+                    <td><a class="btn btn-info" href="{% url 'Update_Route' route.id %}">update</a></td>
+                    <td><a class="btn btn-danger" href="">delete</a></td>
                 </tr>
                 {% endfor %}
                 </tbody>
@@ -89,6 +95,8 @@
                     <th>Persons</th>
                     <th>Date</th>
                     <th>Amount</th>
+                    <th>Action</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -100,6 +108,8 @@
                     <td>{{ booking.persons }}</td>
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.total }}</td>
+                    <td><a class="btn btn-info" href="{% url 'AdminManageBookings' booking.id %}">update</a> </td>
+                    <td><a class="btn btn-danger" href="">delete</a> </td>
                 </tr>
                 {% endfor %}
                 </tbody>

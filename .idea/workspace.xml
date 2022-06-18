@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e092383-9586-48f1-895a-95c29d2801eb" name="Default Changelist" comment="">
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/access_token.py" afterDir="false" />
+      <change afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/managebooking.html" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/SACCO_SYSTEM_M_PESA/settings.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/SACCO_SYSTEM_M_PESA/settings.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/urls.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/urls.py" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/views.py" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/core/views.py" afterDir="false" />
       <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/db.sqlite3" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/AdminSite.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/AdminSite.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/MyBookings.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/MyBookings.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/about.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/about.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/index.html" afterDir="false" />
+      <change beforePath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/services.html" beforeDir="false" afterPath="D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +147,15 @@
       <workItem from="1654930811259" duration="5702000" />
       <workItem from="1654942811659" duration="8080000" />
       <workItem from="1654951735005" duration="2932000" />
-      <workItem from="1654955886658" duration="304000" />
+      <workItem from="1654955886658" duration="943000" />
+      <workItem from="1654965546315" duration="90000" />
+      <workItem from="1654965727749" duration="29000" />
+      <workItem from="1654966102936" duration="18000" />
+      <workItem from="1654966173951" duration="1027000" />
+      <workItem from="1655010949487" duration="115000" />
+      <workItem from="1655431313086" duration="688000" />
+      <workItem from="1655544261459" duration="20000" />
+      <workItem from="1655555755147" duration="6091000" />
     </task>
     <servers />
   </component>
@@ -156,16 +173,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://D:/PycharmProjects/SACCO_SYSTEM_M_PESA/templates/AdminSite.html</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

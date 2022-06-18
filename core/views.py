@@ -159,3 +159,10 @@ class Search(View):
         else:
             return render(request, 'Search.html')
         return render(request, 'Search.html', {'route': route})
+
+
+class AdminManageBookings(UpdateView):
+    template_name = 'managebooking.html'
+    model = Booking
+    success_url = '/'
+    fields = ['user', 'route', 'date', 'Time', 'persons', 'mobile_no', 'total']

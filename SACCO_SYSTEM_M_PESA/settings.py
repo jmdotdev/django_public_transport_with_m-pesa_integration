@@ -13,6 +13,10 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.http import request
+
+from core.access_token import getAccessToken
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -61,7 +65,7 @@ MPESA_CONFIG = {
     'SAFARICOM_API': 'https://sandbox.safaricom.co.ke',
     'SHORT_CODE': '174379',
     'TRANSACTION_TYPE': 'CustomerBuyGoodsOnline',
-    'Access Token':'21151-53711059-2',
+    # 'Access Token': getAccessToken(request=request),
 }
 
 ROOT_URLCONF = 'SACCO_SYSTEM_M_PESA.urls'
